@@ -1,0 +1,15 @@
+img[alt="yummy logo"] {
+    width: 3.125rem;
+}
+
+aside {
+    left: -17.25rem;
+}
+
+aside i {
+    cursor: pointer;
+}
+
+div#side-navbar {
+    width: 17.25rem;
+}
