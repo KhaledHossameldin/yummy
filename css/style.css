@@ -1,17 +1,5 @@
-img[alt="yummy logo"] {
-    width: 3.125rem;
-}
-
-aside {
-    left: -17.25rem;
-}
-
 .cursor-pointer {
     cursor: pointer;
-}
-
-div#side-navbar {
-    width: 17.25rem;
 }
 
 div#loading-overlay {

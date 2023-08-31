@@ -1,36 +1,17 @@
+let meals = [];
 
-
-$('i#open-colse-navbar').click(function () {
-    if (this.classList.contains('fa-close')) {
-        closeSideNavbar();
-        return;
-    }
-    openSideNavbar();
-});
-
-function closeSideNavbar() {
-    $('i#open-colse-navbar').removeClass('fa-close').addClass('fa-align-justify');
-    $('aside').animate({ left: '-17.25rem' }, 500);
-    $('aside li').animate({top: 300}, 500);
-}
-
-function openSideNavbar() {
-    $('i#open-colse-navbar').removeClass('fa-align-justify').addClass('fa-close');
-    $('aside').animate({ left: '0' }, 500);
-    for (let i = 0; i < 5; i++) {
-        $('aside li').eq(i).animate({
-            top: 0
-        }, (i + 5) * 100)
-    }
+function viewMealDetails(index) {
+    sessionStorage.setItem('meal', JSON.stringify(meals[index]));
+    open('./html/meal_details.html', '_self');
 }
 
 $(document).ready(function () {
     closeSideNavbar();
     fetchMeals().then(function (value) {
         $('div#loading-overlay').fadeOut(500);
-        console.log('done');
-        for (const meal of value) {
-            $('div#meals-content').append(meal.buildElement());
+        meals = value;
+        for (let i = 0; i < meals.length; i++) {
+            $('div#meals-content').append(meals[i].buildElement(i));
         }
     });
 });
