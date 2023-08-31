@@ -26,4 +26,11 @@ function openSideNavbar() {
 
 $(document).ready(function () {
     closeSideNavbar();
+    fetchMeals().then(function (value) {
+        $('div#loading-overlay').fadeOut(500);
+        console.log('done');
+        for (const meal of value) {
+            $('div#meals-content').append(meal.buildElement());
+        }
+    });
 });
