@@ -3,6 +3,7 @@ const searchUrl = 'search.php?s=';
 const mealDetailsUrl = 'lookup.php?i=';
 const firstLetterUrl = 'search.php?f=';
 const categoriesUrl = 'categories.php';
+const areasUrl = 'list.php?a=list';
 const filterByCategoryUrl = 'filter.php?c=';
 const filterByAreaUrl = 'filter.php?a=';
 const filterByIngredientUrl = 'filter.php?i=';

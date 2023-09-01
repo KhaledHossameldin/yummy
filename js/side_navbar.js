@@ -77,4 +77,5 @@ $(document).ready(function () {
             </div>
         </aside>
     `);
+    closeSideNavbar();
 });
