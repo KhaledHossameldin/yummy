@@ -1,7 +1,7 @@
 let meals = [];
 
 function viewMealDetails(index) {
-    sessionStorage.setItem('meal', JSON.stringify(meals[index]));
+    sessionStorage.setItem('meal', meals[index].id);
     open('./meal_details.html', '_self');
 }
 
