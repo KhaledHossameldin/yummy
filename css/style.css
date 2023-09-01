@@ -3,11 +3,11 @@
 }
 
 div.meal-item div {
-    transform: translateY(100%);
-    -webkit-transform: translateY(100%);
-    -moz-transform: translateY(100%);
-    -ms-transform: translateY(100%);
-    -o-transform: translateY(100%);
+    transform: translateY(105%);
+    -webkit-transform: translateY(105%);
+    -moz-transform: translateY(105%);
+    -ms-transform: translateY(105%);
+    -o-transform: translateY(105%);
     transition: 0.5s transform;
     -webkit-transition: 0.5s transform;
     -moz-transition: 0.5s transform;
