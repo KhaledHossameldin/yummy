@@ -4,6 +4,7 @@ const mealDetailsUrl = 'lookup.php?i=';
 const firstLetterUrl = 'search.php?f=';
 const categoriesUrl = 'categories.php';
 const areasUrl = 'list.php?a=list';
+const ingredientsUrl = 'list.php?i=list';
 const filterByCategoryUrl = 'filter.php?c=';
 const filterByAreaUrl = 'filter.php?a=';
 const filterByIngredientUrl = 'filter.php?i=';
@@ -35,6 +36,11 @@ async function fetchByFirstLetter(search) {
 async function fetchCategories() {
     const data = await getData(categoriesUrl);
     return data.categories.map((value) => new Category(value));
+}
+
+async function fetchIngredients() {
+    const data = await getData(ingredientsUrl);
+    return data.meals.slice(0, 20).map((value) => new Ingredient(value));
 }
 
 async function getData(url) {

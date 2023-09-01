@@ -36,7 +36,7 @@ class Category {
     constructor(category) {
         this.name = category.strCategory;
         this.image = category.strCategoryThumb;
-        this.description = category.strCategoryDescription.split(" ").slice(0,20).join(" ");
+        this.description = category.strCategoryDescription.split(" ").slice(0, 20).join(" ");
     }
 
     buildElement(index) {
@@ -52,4 +52,23 @@ class Category {
             </div>
         `;
     };
+}
+
+class Ingredient {
+    constructor(ingredient) {
+        this.name = ingredient.strIngredient;
+        this.description = ingredient.strDescription.split(" ").slice(0, 20).join(" ");
+    }
+
+    buildElement(index) {
+        return `
+            <div onClick="viewMeals(${index})" class="col-lg-3 col-md-4 col-sm-6">
+                <div class="text-white text-center cursor-pointer">
+                    <i class="fa-solid fa-drumstick-bite fa-4x"></i>
+                    <h3>${this.name}</h3>
+                    <p>${this.description}</p>
+                </div>
+            </div>
+        `;
+    }
 }
