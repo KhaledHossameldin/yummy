@@ -13,7 +13,7 @@ class Meal {
             if (meal[`strIngredient${i}`] == '') {
                 break;
             }
-            this.ingredients.push(meal[`strMeasure${i}`].trim() + ' ' + meal[`strIngredient${i}`].trim());
+            this.ingredients.push(meal[`strMeasure${i}`] + ' ' + meal[`strIngredient${i}`]);
         }
     }
 

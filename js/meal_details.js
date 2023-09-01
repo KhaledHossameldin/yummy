@@ -1,6 +1,7 @@
 const meal = JSON.parse(sessionStorage.getItem('meal'));
 
 $(document).ready(function () {
+    closeSideNavbar();
     $(document.body).prepend(`
         <main class="container py-5">
             <div class="row g-4">
