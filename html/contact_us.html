@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy</title>
+
+    <link rel="shortcut icon" href="../logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/side_navbar.css" />
+    <link rel="stylesheet" href="../css/contact_us.css" />
+</head>
+
+<body class="bg-black">
+
+    <!-- Main Section -->
+    <main class="container">
+        <div class="row py-5 g-4 ">
+            <div class="contact min-vh-100 d-flex justify-content-center align-items-center">
+                <div class="container w-75 text-center">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <input id="name-input" type="text" class="form-control" placeholder="Enter Your Name">
+                            <div id="name-alert" class="alert alert-danger w-100">
+                                Special characters and numbers not allowed
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <input id="email-input" type="email" class="form-control " placeholder="Enter Your Email">
+                            <div id="email-alert" class="alert alert-danger w-100">
+                                Email not valid *exemple@yyy.zzz
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <input id="phone-input" type="text" class="form-control " placeholder="Enter Your Phone">
+                            <div id="phone-alert" class="alert alert-danger w-100">
+                                Enter valid Phone Number
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <input id="age-input" type="number" class="form-control " placeholder="Enter Your Age">
+                            <div id="age-alert" class="alert alert-danger w-100">
+                                Enter valid age
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <input id="password-input" type="password" class="form-control "
+                                placeholder="Enter Your Password">
+                            <div id="password-alert" class="alert alert-danger w-100">
+                                Enter valid password *Minimum eight characters, at least one letter and one number:*
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <input id="repassword-input" type="password" class="form-control " placeholder="Repassword">
+                            <div id="repassword-alert" class="alert alert-danger w-100">
+                                Enter valid repassword
+                            </div>
+                        </div>
+                    </div>
+                    <button disabled class="btn btn-outline-danger px-2 mt-3">Submit</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../js/code.jquery.com_jquery-3.7.0.min.js"></script>
+    <script src="../js/classes.js"></script>
+    <script src="../js/side_navbar.js"></script>
+    <script src="../js/network_handler.js"></script>
+    <script src="../js/contact_us.js"></script>
+
+</body>
+
+</html>

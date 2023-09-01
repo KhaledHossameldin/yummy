@@ -1,0 +1,4 @@
+div#name-alert, div#email-alert, div#phone-alert, div#age-alert, div#password-alert, div#repassword-alert {
+    display: none;
+    margin-top: 0.5rem;
+}

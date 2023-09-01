@@ -51,7 +51,7 @@ $(document).ready(function () {
                         <p onClick="goToTab('ingredients')" class="mb-0 cursor-pointer">Ingredients</p>
                         </li>
                         <li class="position-relative">
-                        <p onClick="goToTab('contact-us')" class="mb-0 cursor-pointer">Contacts Us</p>
+                        <p onClick="goToTab('contact_us')" class="mb-0 cursor-pointer">Contacts Us</p>
                     </li>
                 </ul>
                 <div>
@@ -68,7 +68,7 @@ $(document).ready(function () {
                 </div>
             </div>
             <div class="d-flex flex-column justify-content-between align-items-center h-100 bg-white px-2 py-4">
-                <img src="${!location.pathname.endsWith('index.html') ? '.' : ''}./images/logo.png" alt="yummy logo" />
+                <img src="${!location.pathname.endsWith('index.html') ? '.' : ''}./logo.png" alt="yummy logo" />
                 <i onClick="toggleSideNavbar(this)" id="open-colse-navbar" class="fa-solid fa-align-justify fa-2x cursor-pointer"></i>
                 <div class="d-flex flex-column gap-2">
                     <i class="fa-solid fa-globe cursor-pointer"></i>
