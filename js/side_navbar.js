@@ -22,7 +22,7 @@ function openSideNavbar() {
 
 function goToTab(tab) {
     let path = '';
-    if (location.pathname.endsWith('index.html')) {
+    if (location.pathname.endsWith('/')) {
         path = `./html/${tab}.html`;
     } else {
         path = `./${tab}.html`;
@@ -32,7 +32,7 @@ function goToTab(tab) {
 
 $(document).ready(function () {
     $(document.body).append(`
-        <aside class="position-fixed top-0 bottom-0 d-flex z-${location.pathname.endsWith('index.html') ? 2 : 3}">
+        <aside class="position-fixed top-0 bottom-0 d-flex z-${location.pathname.endsWith('/') ? 2 : 3}">
             <div id="side-navbar"
                 class="bg-black p-4 d-flex flex-column justify-content-between text-white overflow-hidden">
                 <ul class="list-unstyled d-flex flex-column gap-3 overflow-hidden">
@@ -66,7 +66,7 @@ $(document).ready(function () {
                 </div>
             </div>
             <div class="d-flex flex-column justify-content-between align-items-center h-100 bg-white px-2 py-4">
-                <img src="${!location.pathname.endsWith('index.html') ? '.' : ''}./logo.png" alt="yummy logo" />
+                <img src="${!location.pathname.endsWith('/') ? '.' : ''}./logo.png" alt="yummy logo" />
                 <i onClick="toggleSideNavbar(this)" id="open-colse-navbar" class="fa-solid fa-align-justify fa-2x cursor-pointer"></i>
                 <div class="d-flex flex-column gap-2">
                     <i class="fa-solid fa-globe cursor-pointer"></i>
