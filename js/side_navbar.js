@@ -16,9 +16,7 @@ function openSideNavbar() {
     $('i#open-colse-navbar').removeClass('fa-align-justify').addClass('fa-close');
     $('aside').animate({ left: '0' }, 500);
     for (let i = 0; i < 5; i++) {
-        $('aside li').eq(i).animate({
-            top: 0
-        }, (i + 5) * 100)
+        $('aside li').eq(i).animate({ top: 0 }, (i + 5) * 100);
     }
 }
 

@@ -9,12 +9,11 @@ function viewMealDetails(index) {
 }
 
 $(document).ready(function () {
-    closeSideNavbar();
     fetchMeals('', category, area, ingredient).then(function (value) {
-        $('div#loading-overlay').fadeOut(500);
         meals = value;
         for (let i = 0; i < meals.length; i++) {
             $('div#meals-content').append(meals[i].buildElement(i));
         }
+        hideLoading();
     });
 });

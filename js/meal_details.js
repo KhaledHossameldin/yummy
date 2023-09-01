@@ -1,11 +1,7 @@
 const meal = JSON.parse(sessionStorage.getItem('meal'));
 
 $(document).ready(function () {
-    closeSideNavbar();
     fetchMealDetails(meal).then(function (value) {
-        $('div#loading-overlay').fadeOut(500);
-        // console.log(value.tag.split(','));
-        console.log(value.tag);
         $(document.body).prepend(`
             <main class="container py-5">
                 <div class="row g-4">
@@ -36,5 +32,6 @@ $(document).ready(function () {
                 </div>
             </main>
         `);
+        hideLoading();
     });
 });

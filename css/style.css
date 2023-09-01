@@ -2,10 +2,6 @@
     cursor: pointer;
 }
 
-div#loading-overlay {
-    display: flex;
-}
-
 div.meal-item div {
     transform: translateY(100%);
     -webkit-transform: translateY(100%);

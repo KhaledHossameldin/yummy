@@ -5,7 +5,7 @@ function viewMealDetails(index) {
     open('./meal_details.html', '_self');
 }
 
-$('input#name-input').keyup(function () {
+$('input#name-input').on('input', function () {
     $('div#meals-content').html(`
         <div id="loading-overlay"
             class="bg-black position-absolute top-0 start-0 bottom-0 end-0 z-3 justify-content-center align-items-center text-white vh-100">
@@ -22,7 +22,7 @@ $('input#name-input').keyup(function () {
     });
 });
 
-$('input#first-letter-input').keyup(function () {
+$('input#first-letter-input').on('input', function () {
     $('div#meals-content').html(`
         <div id="loading-overlay"
             class="bg-black position-absolute top-0 start-0 bottom-0 end-0 z-3 justify-content-center align-items-center text-white vh-100">
@@ -30,7 +30,17 @@ $('input#first-letter-input').keyup(function () {
         </div>
     `);
     $('div#loading-overlay').fadeIn(500).css({ display: 'flex' });
-    fetchByFirstLetter(this.value).then(function (value) {
+    if (this.value != '') {
+        fetchByFirstLetter(this.value).then(function (value) {
+            $('div#loading-overlay').fadeOut(500);
+            meals = value;
+            for (let i = 0; i < meals.length; i++) {
+                $('div#meals-content').append(meals[i].buildElement(i));
+            }
+        });
+        return;
+    }
+    fetchMeals('').then(function (value) {
         $('div#loading-overlay').fadeOut(500);
         meals = value;
         for (let i = 0; i < meals.length; i++) {

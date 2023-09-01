@@ -20,6 +20,11 @@ async function fetchMeals(search = '', category = null, area = null, ingredient 
     } else {
         data = await getData(`${searchUrl}${search}`);
     }
+    if (data.meals == null) {
+        data.meals = [];
+    } else if (category != null || area != null || ingredient != null) {
+        data.meals = data.meals.slice(0, 20);
+    }
     return data.meals.map((value) => new Meal(value));
 }
 
@@ -35,7 +40,7 @@ async function fetchByFirstLetter(search) {
 
 async function fetchCategories() {
     const data = await getData(categoriesUrl);
-    return data.categories.map((value) => new Category(value));
+    return data.categories.slice(0, 20).map((value) => new Category(value));
 }
 
 async function fetchIngredients() {

@@ -9,7 +9,6 @@ function viewMeals(index) {
 
 $(document).ready(function () {
     getData(areasUrl).then(function (value) {
-        $('div#loading-overlay').fadeOut(500);
         areas = value.meals.map(value => value.strArea);
         for (let i = 0; i < areas.length; i++) {
             $('div#areas-content').append(
@@ -19,7 +18,8 @@ $(document).ready(function () {
                         <h3>${areas[i]}</h3>
                     </div>
                 </div>
-        `);
+            `);
         }
+        hideLoading();
     });
 });

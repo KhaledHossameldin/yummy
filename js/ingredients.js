@@ -9,11 +9,10 @@ function viewMeals(index) {
 
 $(document).ready(function () {
     fetchIngredients().then(function (value) {
-        $('div#loading-overlay').fadeOut(500);
-        console.log(value);
         ingredients = value;
         for (let i = 0; i < ingredients.length; i++) {
             $('div#ingredients-content').append(ingredients[i].buildElement(i));
         }
+        hideLoading();
     });
 });

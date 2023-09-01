@@ -42,7 +42,7 @@ class Category {
     buildElement(index) {
         return `
             <div onClick="viewMeals(${index})" class="col-lg-3 col-md-4 col-sm-6">
-                <div class="rounded position-relative cursor-pointer category-item overflow-hidden">
+                <div class="rounded position-relative cursor-pointer meal-item overflow-hidden">
                     <img src="${this.image}" class="img-fluid rounded" />
                     <div class="position-absolute top-0 start-0 bottom-0 end-0 bg-white bg-opacity-75 rounded text-center">
                         <h3>${this.name}</h3>
