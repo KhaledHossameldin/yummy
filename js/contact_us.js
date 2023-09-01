@@ -79,7 +79,8 @@ $('input#repassword-input').on('input', function () {
 
 function toggleButton() {
     if (isNameValid && isEmailValid && isPhoneValid && isEmailValid && isAgeValid && isPasswordValid && isRepasswordValid) {
-        $('button').removeAttr('disabled');
+        $('button').prop('disabled', false);
+        return;
     }
-    $('button').attr('disabled', disabled);
+    $('button').prop('disabled', true);
 }
